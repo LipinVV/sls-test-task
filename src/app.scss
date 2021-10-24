@@ -1,0 +1,27 @@
+$app-bg: #000000;
+$robot-bg: #7c59f5;
+$gadgets-header: #885FF8;
+$working-status: #232198;
+$working-status-text: #FFFFFF;
+$online-status: #00FF0A;
+$offline-status: #FF0000;
+$loading-card-bg: #3f4956;
+$loading-card-line: #19212C80;
+$gadget-remove-button: #FF6969;
+$gadget-cancel-button: #BFC5CF;
+$simulation-button: #06f8b4;
+
+.app__simulation-button {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  max-width: 113px;
+  min-height: 51px;
+  border-radius: 51px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $simulation-button;
+}

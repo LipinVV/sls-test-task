@@ -1,0 +1,134 @@
+@import "src/app";
+
+.single-gadget {
+  display: grid;
+  border: 1px solid $app-bg;
+  width: 300px;
+  height: 200px;
+  background-color: $robot-bg;
+  border-radius: 20px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.single-gadget__picture {
+  display: flex;
+  max-width: 98px;
+  max-height: 98px;
+}
+
+.single-gadget__url {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-gadget__title {
+  font-size: 24px;
+  padding-left: 17px;
+  margin-top: -25px;
+  position: relative;
+
+  &:hover {
+    color: $working-status-text;
+  }
+
+  &:hover:after {
+    position: absolute;
+    display: flex;
+    min-width: 150px;
+    content: 'Для удаления нажмите на имя устройства';
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: $app-bg;
+  }
+}
+
+.single-gadget__online-status {
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 34px;
+  padding-top: 16px;
+  max-height: 30px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $online-status;
+    transform: translate(-15px, 2px);
+  }
+}
+
+.single-gadget__online-status_offline {
+  position: relative;
+}
+
+.single-gadget__online-status_offline:before {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $offline-status;
+  transform: translate(-15px, 2px);
+}
+
+.single-gadget__working-status {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 15px;
+  max-height: 27px;
+  background-color: $working-status;
+  border-radius: 50px;
+  color: $working-status-text;
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 30px;
+  padding: 5px 10px 5px 5px;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 19px;
+    background-image: url('./../../img/deviceIsSwitchedOn.svg');
+    margin-right: 10px;
+  }
+}
+
+.single-gadget__working-status_alert:before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-image: url('./../../img/deviceIsSwitchedOff.svg');
+  margin-right: 10px;
+}
+
+.single-gadget__working-time {
+  display: none;
+}
+
+.single-gadget:nth-of-type(1) .single-gadget__working-time {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 17px;
+  margin-top: 30px;
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('./../../img/deviceClocks.svg');
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,35 @@
+@import "src/app";
+
+.gadgets {
+  position: relative;
+  display: grid;
+  grid-gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gadgets__header {
+  color: $gadgets-header;
+  font-size: 24px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.gadgets__refresh-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  max-width: 143px;
+  min-height: 51px;
+  border-radius: 51px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+}

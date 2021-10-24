@@ -1,0 +1,23 @@
+@import "src/app";
+
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-screen__header,
+.error-screen__button {
+  color: $working-status-text;
+}
+
+.error-screen__button {
+  min-width: 127px;
+  min-height: 40px;
+  background-color: $working-status;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
